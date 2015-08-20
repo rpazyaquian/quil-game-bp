@@ -4,15 +4,21 @@
             [quil.middleware :as m]))
 
 (defn setup [])
-(defn update [state])
-(defn draw [state])
 
-(defn make-sketch
-  (q/defsketch basic-game-test
+(defn update [state])
+
+(defn draw [state]
+  (q/background 0))
+
+(defn make-sketch []
+  (q/sketch
+    :title "basic"
     :size [200 200]
     :setup setup
     :draw draw
     :update update
+    :features [:keep-on-top
+               :exit-on-close]
     :middleware [m/fun-mode]))
 
 (defn -main
