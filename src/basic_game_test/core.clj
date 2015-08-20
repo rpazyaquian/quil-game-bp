@@ -5,14 +5,14 @@
 
 (defn draw-time [time]
   (q/fill 0)
-  (q/text-num time 10 10))
+  (q/text (str time) 10 10))
 
 (defn setup []
   (let [time (System/currentTimeMillis)]
     {:time time}))
 
 (defn update [state]
-  state)
+  (assoc state :time (System/currentTimeMillis)))
 
 (defn draw [state]
   (q/background 255)
