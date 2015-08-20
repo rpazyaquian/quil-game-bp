@@ -1,6 +1,20 @@
 # basic-game-test
 
-FIXME: description
+A minimal application that covers the very basics that any game needs.
+
+The aim of this application is to:
+
+1. Run a loop.
+2. Track system time.
+3. Render system time.
+4. Render current input state.
+
+- A game loops.
+- A game responds to input.
+- A game tracks time.
+- A game renders its state.
+
+Basically, it's a clock.
 
 ## Installation
 
