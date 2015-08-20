@@ -2,7 +2,7 @@
   (:gen-class)
   (:require [quil.core :as q]
             [quil.middleware :as m]
-            [basic-game-test.draw :as draw]))
+            [basic-game-test.draw :as d]))
 
 (defn setup []
   (let [time (System/currentTimeMillis)]
@@ -16,7 +16,7 @@
 
 (defn draw [state]
   (q/background 255 255 255)
-  (draw/draw-state state))
+  (d/draw-state state))
 
 (defn make-sketch []
   (q/sketch
