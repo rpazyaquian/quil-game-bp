@@ -3,7 +3,9 @@
   (:require [quil.core :as q]
             [quil.middleware :as m]))
 
-(defn setup [])
+(defn setup []
+  (let [time (System/currentTimeMillis)]
+    {:time time}))
 
 (defn update [state])
 
