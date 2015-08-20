@@ -3,6 +3,10 @@
   (:require [quil.core :as q]
             [quil.middleware :as m]))
 
+(defn draw-time [time]
+  (q/fill 255)
+  (q/text time 0 0))
+
 (defn setup []
   (let [time (System/currentTimeMillis)]
     {:time time}))
