@@ -4,8 +4,12 @@
             [quil.middleware :as m]))
 
 (defn draw-time [time]
-  (q/fill 0)
+  (q/fill 0 0 0)
   (q/text (str time) 10 10))
+
+(defn draw-time-delta [time-delta]
+  (q/fill 255 0 0)
+  (q/text (str time-delta) 10 30))
 
 (defn setup []
   (let [time (System/currentTimeMillis)]
@@ -13,11 +17,14 @@
      :time-delta 0}))
 
 (defn update [state]
-  (assoc state :time (System/currentTimeMillis)))
+  (let [time (System/currentTimeMillis)
+        time-delta (- time (:time state))]
+    (assoc state :time time :time-delta time-delta)))
 
 (defn draw [state]
-  (q/background 255)
-  (draw-time (:time state)))
+  (q/background 255 255 255)
+  (draw-time (:time state))
+  (draw-time-delta (:time-delta state)))
 
 (defn make-sketch []
   (q/sketch
