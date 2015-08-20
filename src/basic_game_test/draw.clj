@@ -1,2 +1,3 @@
 (ns basic-game-test.draw
-  (:gen-class))
+  (:gen-class)
+  (:require [quil.core :as q]))
