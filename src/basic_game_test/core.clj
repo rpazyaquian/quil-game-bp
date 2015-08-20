@@ -9,7 +9,8 @@
 
 (defn setup []
   (let [time (System/currentTimeMillis)]
-    {:time time}))
+    {:time time
+     :time-delta 0}))
 
 (defn update [state]
   (assoc state :time (System/currentTimeMillis)))
