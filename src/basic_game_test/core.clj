@@ -11,6 +11,10 @@
   (q/fill 255 0 0)
   (q/text (str time-delta) 10 30))
 
+(defn draw-state [state]
+  (draw-time (:time state))
+  (draw-time-delta (:time-delta state)))
+
 (defn setup []
   (let [time (System/currentTimeMillis)]
     {:time time
@@ -23,8 +27,7 @@
 
 (defn draw [state]
   (q/background 255 255 255)
-  (draw-time (:time state))
-  (draw-time-delta (:time-delta state)))
+  (draw-state state))
 
 (defn make-sketch []
   (q/sketch
