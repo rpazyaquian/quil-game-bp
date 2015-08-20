@@ -11,7 +11,8 @@
   (let [time (System/currentTimeMillis)]
     {:time time}))
 
-(defn update [state])
+(defn update [state]
+  state)
 
 (defn draw [state]
   (q/background 0)
