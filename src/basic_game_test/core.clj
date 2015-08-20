@@ -10,7 +10,8 @@
 (defn update [state])
 
 (defn draw [state]
-  (q/background 0))
+  (q/background 0)
+  (draw-time (:time state)))
 
 (defn make-sketch []
   (q/sketch
