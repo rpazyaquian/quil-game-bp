@@ -15,7 +15,7 @@
 
 (defn draw [state]
   (q/background 0)
-  (draw-time (string (:time state))))
+  (draw-time (str (:time state))))
 
 (defn make-sketch []
   (q/sketch
