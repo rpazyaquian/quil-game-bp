@@ -4,8 +4,8 @@
             [quil.middleware :as m]))
 
 (defn draw-time [time]
-  (q/fill 255)
-  (q/text time 0 0))
+  (q/fill 0)
+  (q/text-num time 10 10))
 
 (defn setup []
   (let [time (System/currentTimeMillis)]
@@ -15,8 +15,8 @@
   state)
 
 (defn draw [state]
-  (q/background 0)
-  (draw-time (str (:time state))))
+  (q/background 255)
+  (draw-time (:time state)))
 
 (defn make-sketch []
   (q/sketch
